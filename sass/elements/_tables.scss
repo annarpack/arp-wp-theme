@@ -1,0 +1,87 @@
+table {
+	margin: 0 0 $size__spacing-unit;
+	border-collapse: collapse;
+	width: 100%;
+	font-family: $font__heading;
+
+	td,
+	th {
+		padding: 0.5em;
+		border: 1px solid $color__text-light;
+		word-break: break-all;
+	}
+}
+// Pie Chart
+
+
+.shape-circle {
+	border-radius: 50%;
+	height: 400px;
+	width: 400px;
+	background-color: $color__blue;
+}
+
+
+
+//Bar Graph
+
+.bar-graph {
+	width: 80%;
+	margin: 0 auto;
+	padding: 2em;
+	margin-right: 10em;
+	margin-top: 0;
+	padding-top: 0;
+}
+.bar-graph ul {
+	background: none;
+}
+.bar-graph .bar-line-item {
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0.05em;
+}
+
+.bar-graph ul span.labels {
+	float: right;
+	text-align: left;
+	width: 16%;
+	color: #ADADAD;
+	padding-left: 1em;
+	font-weight: 400;
+}
+
+.bar-graph ul li.graph-lines {
+	float: left;
+	width: 100%;
+	height: 25px;
+	color: #ADADAD;
+	background-color: $color__blue-dark-light_rgba;
+	list-style: none;
+	text-align: center;
+}
+.years {
+	float: right;
+	background-color: $color__blue-dark;
+	height: 25px;
+	text-transform: lowercase;
+	line-height: 20px;
+}
+.years-1 {
+	width: 10%;
+}
+.years-3 {
+	width: 30%;
+}
+.years-5 {
+	width: 50%;
+}
+.years-7 {
+	width: 70%;
+
+}
+.years-10 {
+	width: 80%;
+
+}

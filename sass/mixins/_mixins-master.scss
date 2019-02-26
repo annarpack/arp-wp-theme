@@ -31,14 +31,16 @@
 @mixin filter-duotone {
 
 	&:before {
-		background: $color__link;
+		//background: $color__link;
+		background: transparent;
 		mix-blend-mode: screen;
 		opacity: 0.1;
 		z-index: 2;
 	}
 
 	&:after {
-		background: $color__link;
+		//ackground: $color__link;
+		background: transparent;
 		mix-blend-mode: multiply;
 		opacity: .8;
 		z-index: 3;

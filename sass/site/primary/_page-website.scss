@@ -19,3 +19,11 @@
 .section-content article .entry-content {
   // width: 50%;
 }
+
+.section-content article img.post-thumbnail {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  float: left;
+  margin-right: 1em;
+}

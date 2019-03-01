@@ -27,19 +27,24 @@ get_header(); ?>
 <?php	if ( $query->have_posts() ) : ?>
 <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="box-v">
-          <?php twentynineteen_post_thumbnail(); ?>
-        </div>
-        <div class="entry-content-strategy">
-          <?php
-          the_title( sprintf( '<h5><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h5>' );
-          ?>
-          <?php the_excerpt(); ?>
-        <footer class="entry-footer">
-        </footer><!-- .entry-footer -->
-      </div>
-      </article><!-- #post-${ID} -->
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <header class="entry-header">
+      <?php
+      the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+      ?>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <!-- <img src="<?php the_post_thumbnail_url(); ?>" class="post-thumbnail" /> -->
+        <?php the_content(); ?>
+    </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+      <?php twentynineteen_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
+
+  </article><!-- #post-${ID} -->
     <?php endwhile; ?>
  <!-- end of the loop -->
     <?php else : ?>
